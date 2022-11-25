@@ -1,4 +1,6 @@
 import { useState } from 'react'
+//Dependecia Icons
+import { FaTimesCircle } from "@react-icons/all-files/fa/FaTimesCircle";
 
 const Resenia = ({ resenia }) => {
     const [rating, setRating]=useState(resenia.rating)
@@ -33,6 +35,11 @@ const Resenia = ({ resenia }) => {
             <button className='btn' onClick={restarNota}>
                Restar Calificación
             </button>
+            <button onClick={()=>console.log(resenia.id)} className='close'>
+               <FaTimesCircle />
+            </button>
+
+            
         </div>
     )
 }

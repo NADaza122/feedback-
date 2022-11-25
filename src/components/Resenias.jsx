@@ -5,14 +5,14 @@ const Resenia = ({ resenia }) => {
     const [comments,
            setCommets]=useState(resenia.text)
 
-    //cambiar el estado
+    //Sumar el estado de la Calificación
     const agregarNota=()=>{
         setRating((prev)=>{
             return prev +1
         })
     }
 
-    //restar la nota
+    //Restar el estado de la Calificación
     const restarNota=()=>{
         setRating((prev)=>{
             return prev -1
@@ -28,10 +28,10 @@ const Resenia = ({ resenia }) => {
                 {comments}
             </div>
             <button className='btn' onClick={agregarNota}>
-                Sumar nota
+                Sumar Calificación
             </button>
             <button className='btn' onClick={restarNota}>
-               Restar nota
+               Restar Calificación
             </button>
         </div>
     )

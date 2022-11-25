@@ -1,6 +1,6 @@
-//dependencias necesrias
+//Dependencias necesarias
 import {useState} from "react";
-//data
+//Data
 import Resenias from "./data/Resenias";
 
 import "./index.css";
@@ -12,7 +12,7 @@ import ListR from "./components/ReseniaList";
 
 function App(){
 
-    //crear estado para arregl de resenia 
+    //Crear estado para arreglo de resenia 
     const [lista_resenias, 
         setListaResenias ] = useState(Resenias)
 

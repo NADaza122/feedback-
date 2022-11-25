@@ -1,6 +1,6 @@
 import Resenia from "./Resenias"
 
-const ListR = ( { listaresenias } ) => {
+const ListR = ( { listaresenias, deleteResenia } ) => {
     
     //CONDICIONAL EN CASO DE QUE NO LLEGUE EL ARREGLO
     if(!listaresenias || listaresenias.length === 0 ){
@@ -17,8 +17,9 @@ const ListR = ( { listaresenias } ) => {
                                 {resenia.text}
                             </div>*/
                             <Resenia 
-                                key={resenia.id}
-                                resenia={resenia} />
+                                deleteResenia={ deleteResenia }
+                                key={ resenia.id }
+                                resenia={ resenia } />
                             )
                         )
                         }

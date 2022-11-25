@@ -16,12 +16,20 @@ function App(){
     const [lista_resenias, 
         setListaResenias ] = useState(Resenias)
 
+    //metodó para borrar una reseña
+    const delete_Resenia = (id) => {
+        window.confirm("estas seguro de borrar esta resenia?")
+    }
+
+
     return(
             /*<div className="container">
            <Resenia/>
         </div>*/
         <div className="contianer">
-            <ListR listaresenias={lista_resenias} />
+            <ListR 
+            deleteResenia={delete_Resenia}
+            listaresenias={lista_resenias} />
         </div>
     )
 }

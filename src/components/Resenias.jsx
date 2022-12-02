@@ -7,19 +7,19 @@ const Resenia = ({ resenia, deleteResenia }) => {
     const [comments,
            setCommets]=useState(resenia.text)
 
-    //Sumar el estado de la Calificación
-    const agregarNota=()=>{
-        setRating((prev)=>{
-            return prev +1
-        })
-    }
+    // //Sumar el estado de la Calificación
+    // const agregarNota=()=>{
+    //     setRating((prev)=>{
+    //         return prev +1
+    //     })
+    // }
 
-    //Restar el estado de la Calificación
-    const restarNota=()=>{
-        setRating((prev)=>{
-            return prev -1
-        })
-    }
+    // //Restar el estado de la Calificación
+    // const restarNota=()=>{
+    //     setRating((prev)=>{
+    //         return prev -1
+    //     })
+    // }
 
     return (
         <div className="card">
@@ -29,12 +29,12 @@ const Resenia = ({ resenia, deleteResenia }) => {
             <div className="text-display">
                 {comments}
             </div>
-            <button className='btn' onClick={agregarNota}>
+            {/* <button className='btn' onClick={agregarNota}>
                 Sumar Calificación
             </button>
             <button className='btn' onClick={restarNota}>
                Restar Calificación
-            </button>
+            </button> */}
             <button onClick={()=> deleteResenia(resenia.id) } className='close'>
                <FaTimesCircle />
             </button>

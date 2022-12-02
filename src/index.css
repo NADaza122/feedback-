@@ -23,6 +23,12 @@ ul {
   padding: 0 20px;
 }
 
+.container {
+  max-width: 768px;
+  margin: auto;
+  padding: 0 20px;
+}
+
 header {
   height: 70px;
   width: 100%;

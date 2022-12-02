@@ -22,9 +22,17 @@ function App(){
     //metodó para borrar una reseña
     const delete_Resenia = (id) => {
         if(window.confirm("estas seguro de borrar esta resenia?")){
-            //BORRAR RESEÑA POR ID 
+            //BORRAR RESEÑA POR ID
+            console.log(id);
             setListaResenias(lista_resenias.filter((resenia)=> resenia.id !== id ))
         }
+    }
+
+
+    //METODO AÑADIR RESÑA AL ARREGLO
+    const addResenia=(newResenia)=>{
+        newResenia.id = lista_resenias.length + 1
+        setListaResenias( [ newResenia, ...lista_resenias ] )
     }
 
 
@@ -33,7 +41,9 @@ function App(){
            <Resenia/>
         </div>*/
         <div className="contianer">
-            <FormResenia />
+            <FormResenia 
+                addResenia = {addResenia}
+            />
             <ListR 
             deleteResenia={delete_Resenia}
             listaresenias={lista_resenias} />

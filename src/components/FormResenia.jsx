@@ -2,7 +2,7 @@
 import Rating from './Rating';
 import { useState } from "react"
 
-const FormResenia=()=>{
+const FormResenia=({addResenia})=>{
 
     //ESTADOS PARA RATING Y TEXTO
     const[rating, setRating]=useState(10)
@@ -15,9 +15,24 @@ const FormResenia=()=>{
 
     //console.log(cambiarTexto)
 
+    //METODO PARA CONTROLAR EL SUBMIT
+    const controlSubmit = (e)=>{
+        e.preventDefault()
+        //CREAR OBJETO RESEÑA
+        let newResenia = {
+            rating,
+            text
+        }
+        
+        //AÑADIR NUEVA RESEÑA AL ARREGLO
+        // console.log(newResenia)
+        addResenia(newResenia)
+    }
+
+
     return(
         <div className='card'>
-            <form>
+            <form onSubmit={ controlSubmit } >
                 <h1>Registrar Nueva Reseña</h1>
                 <h2>Cómo calificarias este cursillo?</h2>
 
